@@ -566,6 +566,7 @@ video{
 
 
 .our-solution-item {
+  position: relative;
   height: 450pt;
   margin: 0 1rem;
   padding: 0 1rem;
@@ -607,8 +608,9 @@ video{
   text-align: center;
 }
 .our-solution-cta{
+  position: absolute;
   font-family: 'Muli Regular';
-  margin: 1.4rem 0;
+  bottom: 30px;
 }
 
 //safe secure
@@ -930,10 +932,10 @@ and (min-width: 296px) {
 }
 @media screen and(min-width: 992px){
 
-  .our-solution-cta{
-    position: absolute;
-    bottom: 18px;
-  }
+  // .our-solution-cta{
+  //   // position: absolute;
+  //   bottom: 18px;
+  // }
 
 }
 
