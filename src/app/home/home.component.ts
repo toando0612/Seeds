@@ -4,7 +4,6 @@ import {FormBuilder} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {AngularFirestore} from '@angular/fire/firestore';
 import {throwError} from 'rxjs';
-// import AOS from 'aos';
 import {TranslateService} from '@ngx-translate/core';
 import {MenuService} from '../services/menu.service';
 import {DomSanitizer} from '@angular/platform-browser';
@@ -169,7 +168,6 @@ export class HomeComponent implements OnInit {
     }
 
 
-    // AOS.init();
     // this.jsVideoSrc = document.querySelector('#js-video');
     this.indicates = document.querySelectorAll('.indicate');
     this.indicates[this.index].classList.add('active');
