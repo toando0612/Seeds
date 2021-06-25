@@ -87,41 +87,43 @@
 
     </section>
     <!--  -->
+    <!-- <div class="all-in-one-performance-flex ">
+        <div class="all-in-one-performance-flex-item "> -->
     <section class="we-work-with" style="margin-bottom: 156px">
         <div class="inner-wrapper">
             <div style="text-align: center;">
                 <p>{{ "work-with-p" | translate }}</p>
             </div>
 
-            <div class="grid-row-box col-2" ng-class="changeClass()" id="renamedclass">
-                <div class="logo-container">
+            <div class = "row d-flex justify-content-around text-center">
+                <div class="logo-container col-lg-3 col-md-2 col-sm-4 col-6">
                     <img class="square" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Fpttdigital.jpg?alt=media&token=1cb1c6a2-4ff2-4fe5-b908-785b9b8378ee" alt="">
                 </div>
-                <div class="logo-container">
+                <div class="logo-container col-lg-3 col-md-3 col-sm-4 col-6">
                     <img class="square medium" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Fjumpdigital.jpg?alt=media&token=5e882a8c-1317-4461-abc1-d2728b5e5333" alt="">
                 </div>
-                <div class="logo-container">
+                <div class="logo-container col-lg-3 col-md-3 col-sm-4 col-6">
                     <img class="square bigest" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Ffixer.jpg?alt=media&token=c500d8bf-62db-4a90-9563-55a2cf6fb999" alt="">
                 </div>
-                <div class="logo-container">
+                <div class="logo-container col-lg-3 col-md-3 col-sm-4 col-6">
                     <img class="square medium"  src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Fshinhan.jpg?alt=media&token=30f6a091-4c0b-4a39-88a1-efb8ee6e5441" alt="">
                 </div>
-                <div class="logo-container">
+                <div class="logo-container col-lg-3 col-md-3 col-sm-4 col-6">
                     <img class="square edify" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Fedify.jpg?alt=media&token=9c44ba34-530b-4417-808e-e01f1abdbf8c" alt="">
                 </div>
-                <div class="logo-container">
+                <div class="logo-container col-lg-3 col-md-3 col-sm-4 col-6">
                     <img class="square" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Fshelby-global.jpg?alt=media&token=f110e26d-86cd-4233-8b1b-f2f3cb8d07bc" alt="">
                 </div>
-                <div class="logo-container">
+                <div class="logo-container col-lg-3 col-md-3 col-sm-4 col-6">
                     <img class="square" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Fhrdc.jpg?alt=media&token=9f144e19-89b2-4605-b92c-5779977dfa1a" alt="">
                 </div>
-                <div class="logo-container">
+                <div class="logo-container col-lg-3 col-md-3 col-sm-4 col-6">
                     <img class="square big" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Futut.jpg?alt=media&token=37cef499-fd1a-4c29-add2-31b160a19f85" alt="">
                 </div>
-                <div class="logo-container">
+                <div class="logo-container col-lg-3 col-md-3 col-sm-4 col-6">
                     <img class="square medium" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Fsgbc.jpg?alt=media&token=bee78e29-0a1d-4a90-a618-7eff86f5735d" alt="">
                 </div>
-                <div class="logo-container">
+                <div class="logo-container col-lg-3 col-md-3 col-sm-4 col-6">
                     <img class="square" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Fnayup.jpg?alt=media&token=366e71b8-1c8f-4f89-bfe7-bf99525d3198" alt="">
                 </div>
             </div>
@@ -626,7 +628,7 @@
                                 <div *ngIf="email!.errors!.required">
                                     {{'form-noti.'+'email.'+"require"|translate}}
                                 </div>
-                                <div *ngIf="email?.errors?.email">
+                                <div *ngIf="email!.errors!.email">
                                     {{'form-noti.'+'email.'+"valid"|translate}}
                                 </div>
                             </div>
@@ -650,16 +652,16 @@
                             <div class="row">
                                 <div class="form-group col-6">
                                     <input type="text" placeholder="{{'form-inputs.'+'company'|translate}}" name="company" id="company" class="form-control border-secondary" formControlName="company" >
-                                    <div *ngIf="submitting && company?.invalid && company?.dirty" class="error">
-                                        <div *ngIf="company?.invalid">
+                                    <div *ngIf="submitting && company!.invalid && company!.dirty" class="error">
+                                        <div *ngIf="company!.invalid">
                                             {{'form-noti.'+'company'|translate}}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group col-6" for="position">
                                     <input type="text" placeholder="{{'form-inputs.'+'position'|translate}}" name="position" id="position" class="form-control border-secondary" formControlName="position" >
-                                    <div *ngIf="submitting && position?.invalid && position?.dirty" class="error">
-                                        <div *ngIf="position?.invalid">
+                                    <div *ngIf="submitting && position!.invalid && position!.dirty" class="error">
+                                        <div *ngIf="position!.invalid">
                                             {{'form-noti.'+'position'|translate}}
                                         </div>
                                     </div>
@@ -673,9 +675,9 @@
                                     <h3>{{error}}</h3>
                                 </div>
                                 <div class="contact-message">
-                                    <div *ngIf="this.contactService.form.get('id')?.value else elseState" class="contact-success">
+                                    <div *ngIf="this.contactService.form.get('id')!.value else elseState" class="contact-success">
                                         <!--                <h2 class="success">Success!</h2>-->
-                                        <h4>Thanks <div style="display:inline;font-weight: 600; font-size: 1.6rem">{{firstName?.value}}</div>! We will contact you soon.</h4>
+                                        <h4>Thanks <div style="display:inline;font-weight: 600; font-size: 1.6rem">{{firstName!.value}}</div>! We will contact you soon.</h4>
                                         <button (click)="onReset()" class="btn btn-success">Done</button>
                                     </div>
                                 </div>
